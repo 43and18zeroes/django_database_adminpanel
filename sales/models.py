@@ -14,9 +14,15 @@ class Customer(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=30)
     price = models.FloatField()
+
 class Order(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE) # one-to-many
-    products = models.ManyToManyField(Product)
+    products = models.ManyToManyField(Product, through="Producttype") # many-to-many (through())
+    
+class Producttype(models.Model):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    type_name = models.CharField(max_length=300)
     
 class Bill(models.Model):
     total_amount = models.FloatField()
