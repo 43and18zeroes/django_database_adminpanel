@@ -1,11 +1,8 @@
 from sales.models import Product, Producttype, Bill, Order, Customer
 
-customer1 = Customer.objects.create(first_name="John", last_name="Doe",
-                                    newsletter_abo=True, email_address="john.doe@example.com", account=100.0)
-customer2 = Customer.objects.create(first_name="Jane", last_name="Smith",
-                                    newsletter_abo=False, email_address="jane.smith@example.com", account=200.0)
-customer3 = Customer.objects.create(first_name="Alice", last_name="Johnson",
-                                    newsletter_abo=True, email_address="alice.johnson@example.com", account=300.0)
+customer1 = Customer.objects.create(first_name="John", last_name="Doe", newsletter_abo=True, email_address="john.doe@example.com", account=100.0)
+customer2 = Customer.objects.create(first_name="Jane", last_name="Smith", newsletter_abo=False, email_address="jane.smith@example.com", account=200.0)
+customer3 = Customer.objects.create(first_name="Alice", last_name="Johnson", newsletter_abo=True, email_address="alice.johnson@example.com", account=300.0)
 
 product1 = Product.objects.create(name="Product A", price=10.0)
 product2 = Product.objects.create(name="Product B", price=20.0)
