@@ -10,3 +10,6 @@ class Customer(models.Model):
     newsletter_abo = models.BooleanField(default=True)
     email_address = models.EmailField(max_length=30, blank=True, default="")
     account = models.FloatField(blank=True, null=True)
+    
+class Order(models.Model):
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
