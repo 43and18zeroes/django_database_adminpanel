@@ -19,6 +19,10 @@ class Customer(models.Model):
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
     
+    def save(self):
+        self.account = 4325234
+        return super().save()
+    
 class Product(models.Model):
     name = models.CharField(max_length=30)
     price = models.FloatField()
