@@ -6,7 +6,7 @@ from .models import Customer, Bill, Product, Producttype, Order
 
 class CustomerAdmin(admin.ModelAdmin):
     list_filter = ["first_name", "last_name"]
-    list_display = ["last_name", "account"]
+    # list_display = ["last_name", "account"]
     fieldsets = [
         (
             None,
