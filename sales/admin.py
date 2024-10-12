@@ -3,9 +3,11 @@ from .models import Customer, Bill, Product, Producttype, Order
 
 # Register your models here.
 
+
 class CustomerAdmin(admin.ModelAdmin):
-    list_filter=["first_name","last_name"]
-    list_display=["last_name", "account"]
+    list_filter = ["first_name", "last_name"]
+    list_display = ["last_name", "account"]
+
 
 admin.site.register(Customer, CustomerAdmin)
 admin.site.register(Bill)
