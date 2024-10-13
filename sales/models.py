@@ -5,7 +5,7 @@ from django.db import models
 from django.db import models
 
 class Customer(models.Model):
-    first_name = models.CharField(max_length=30)
+    first_name = models.CharField(max_length=30, help_text="max 20 letters dummy")
     last_name = models.CharField(max_length=30)
     newsletter_abo = models.BooleanField(default=True)
     email_address = models.EmailField(max_length=30, blank=True, default="")
