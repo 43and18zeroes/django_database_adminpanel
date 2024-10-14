@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import CustomerListView
+from .views import CustomerListView, CustomerListSearchView
 
 urlpatterns = [
-    path('', CustomerListView.as_view())
+    path('', CustomerListView.as_view()),
+    path('<str:name>', CustomerListSearchView.as_view())
 ]
