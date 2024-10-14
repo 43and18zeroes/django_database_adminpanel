@@ -67,7 +67,9 @@ ROOT_URLCONF = 'database_testproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+                BASE_DIR / 'sales/templates/'
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
